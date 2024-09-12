@@ -25,4 +25,4 @@ const OdeClientProvider = isEntNgContext
 
 const ThemeProvider = isEntNgContext ? EdificeThemeProvider : OpenThemeProvider;
 
-export { Layout, useOdeClient, OdeClientProvider, ThemeProvider };
+export { isEntNgContext, Layout, useOdeClient, OdeClientProvider, ThemeProvider };
