@@ -3,25 +3,34 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import Backend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 
+import { isEntNgContext } from "./utils/context.utils";
+import { resources } from "~/dictionaries";
+
 i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    backend: {
-      loadPath: (_lngs: string[], namespaces: string[]) => {
-        const urls = namespaces.map((namespace: string) => {
-          if (namespace === "common") {
-            return `/i18n`;
+    ...(() => {
+      return isEntNgContext
+        ? {
+            backend: {
+              loadPath: (_lngs: string[], namespaces: string[]) => {
+                const urls = namespaces.map((namespace: string) => {
+                  if (namespace === "common") {
+                    return `/i18n`;
+                  }
+                  return `/${namespace}/i18n`;
+                });
+                return urls;
+              },
+              parse: function (data: string) {
+                return JSON.parse(data);
+              },
+            },
           }
-          return `/${namespace}/i18n`;
-        });
-        return urls;
-      },
-      parse: function (data: string) {
-        return JSON.parse(data);
-      },
-    },
+        : { resources };
+    })(),
     defaultNS: "common",
     // you can add name of the app directly in the ns array
     ns: ["common", "magneto"],
