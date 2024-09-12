@@ -1,6 +1,6 @@
 import { useEffect, useReducer } from "react";
 
-import { useOdeClient, useUser, useToast } from "@edifice-ui/react";
+import { useUser, useToast } from "@edifice-ui/react";
 import {
   odeServices,
   PutShareResponse,
@@ -15,6 +15,7 @@ import { useDispatch } from "react-redux";
 import { ShareOptions, ShareResourceMutation } from "../ShareModal";
 import { boardsApi } from "~/services/api/boards.service.ts";
 import { foldersApi } from "~/services/api/folders.service.ts";
+import { useOdeClient } from "~/utils/context.utils";
 
 interface UseShareResourceModalProps {
   /**

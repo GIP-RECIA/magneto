@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Card, useOdeClient, Tooltip } from "@edifice-ui/react";
+import { Card, Tooltip } from "@edifice-ui/react";
 import {
   mdiAccountCircle,
   mdiCalendarBlank,
@@ -19,6 +19,7 @@ import "./BoardItem.scss";
 import { LAYOUT_TYPE } from "~/core/enums/layout-type.enum";
 import { Board } from "~/models/board.model";
 import { useBoardsNavigation } from "~/providers/BoardsNavigationProvider";
+import { useOdeClient } from "~/utils/context.utils";
 
 interface BoardItemProps {
   board: {

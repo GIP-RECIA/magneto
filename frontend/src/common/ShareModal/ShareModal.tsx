@@ -11,7 +11,6 @@ import {
   Button,
   Tooltip,
   Combobox,
-  useOdeClient,
 } from "@edifice-ui/react";
 import { UseMutationResult } from "@tanstack/react-query";
 import {
@@ -32,6 +31,7 @@ import { FOLDER_TYPE } from "~/core/enums/folder-type.enum";
 import { Folder } from "~/models/folder.model";
 import { useBoardsNavigation } from "~/providers/BoardsNavigationProvider";
 import { useFoldersNavigation } from "~/providers/FoldersNavigationProvider";
+import { useOdeClient } from "~/utils/context.utils";
 import "./ShareModal.scss";
 
 export type ShareOptions = {

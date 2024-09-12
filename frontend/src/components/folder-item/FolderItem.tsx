@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 
-import { Card, useOdeClient } from "@edifice-ui/react";
+import { Card } from "@edifice-ui/react";
 import "./FolderItem.scss";
 import { mdiFolder, mdiFolderAccount } from "@mdi/js";
 import Icon from "@mdi/react";
@@ -12,6 +12,7 @@ import { Board } from "~/models/board.model";
 import { Folder } from "~/models/folder.model";
 import { useFoldersNavigation } from "~/providers/FoldersNavigationProvider";
 import { useMoveBoardsMutation } from "~/services/api/boards.service";
+import { useOdeClient } from "~/utils/context.utils";
 import { UserRights } from "~/utils/share.utils";
 
 type FolderListProps = {

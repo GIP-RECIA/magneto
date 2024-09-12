@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Button, useOdeClient, useToggle } from "@edifice-ui/react";
+import { Button, useToggle } from "@edifice-ui/react";
 import { mdiFolderPlus, mdiStar } from "@mdi/js";
 import { Icon } from "@mdi/react";
 import { useTranslation } from "react-i18next";
@@ -10,6 +10,7 @@ import { MagnetsCollectionModal } from "../magnets-collection/MagnetsCollectionM
 import "./SideBar.scss";
 import { FOLDER_TYPE } from "~/core/enums/folder-type.enum";
 import { useFoldersNavigation } from "~/providers/FoldersNavigationProvider";
+import { useOdeClient } from "~/utils/context.utils";
 import { UserRights } from "~/utils/share.utils";
 
 type SideBarButtonsProps = {

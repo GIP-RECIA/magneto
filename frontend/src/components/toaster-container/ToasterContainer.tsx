@@ -5,7 +5,6 @@ import {
   ActionBar,
   isActionAvailable,
   useToggle,
-  useOdeClient,
   checkUserRight,
 } from "@edifice-ui/react";
 import { useTransition, animated } from "@react-spring/web";
@@ -30,6 +29,7 @@ import { useFoldersNavigation } from "~/providers/FoldersNavigationProvider";
 import { useDuplicateBoardMutation } from "~/services/api/boards.service";
 import { useActions } from "~/services/queries";
 import { useUserRightsStore } from "~/stores";
+import { useOdeClient } from "~/utils/context.utils";
 
 export interface ToasterContainerProps {
   reset: () => void;
