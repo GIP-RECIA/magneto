@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { AppHeader, Button, useOdeClient } from "@edifice-ui/react";
+import { AppHeader, Button } from "@edifice-ui/react";
 import "./Header.scss";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import myimg from "./uni-magneto.png";
 import { FOLDER_TYPE } from "~/core/enums/folder-type.enum";
 import { useFoldersNavigation } from "~/providers/FoldersNavigationProvider";
+import { useOdeClient } from "~/utils/context.utils";
 import { UserRights } from "~/utils/share.utils";
 
 interface HeaderProps {

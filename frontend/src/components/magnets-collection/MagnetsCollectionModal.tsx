@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from "react";
 
-import { Modal, SearchBar, useOdeClient, useToggle } from "@edifice-ui/react";
+import { Modal, SearchBar, useToggle } from "@edifice-ui/react";
 import { Switch } from "@mui/material";
 import { useSpring } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
@@ -13,6 +13,7 @@ import { Board, IBoardItemResponse } from "~/models/board.model";
 import { Card as CardModel, ICardItemResponse } from "~/models/card.model";
 import "./MagnetsCollectionModal.scss";
 import { useGetAllBoardsQuery } from "~/services/api/boards.service";
+import { useOdeClient } from "~/utils/context.utils";
 
 type props = {
   isOpen: boolean;
