@@ -80,7 +80,7 @@ export default ({ mode }: { mode: string }) => {
     host: "0.0.0.0",
     port: 4200,
     headers,
-    open: true,
+    open: false,
     strictPort: true,
     mimeTypes: {
       js: "application/javascript",
