@@ -57,7 +57,7 @@ clean () {
 doInit () {
   echo "[init] Get branch name from jenkins env..."
   BRANCH_NAME=`echo $GIT_BRANCH | sed -e "s|origin/||g"`
-  if [ "$BRANCH_NAME" = "" ]; then
+  if [ "$BRANCH_NAME" == "" ]; then
     echo "[init] Get branch name from git..."
     BRANCH_NAME=`git branch | sed -n -e "s/^\* \(.*\)/\1/p"`
   fi
@@ -75,7 +75,7 @@ doInit () {
     sed -i "s/%packageVersion%/${BRANCH_NAME}/" package.json
   fi
 
-  if [ "$NO_DOCKER" = "true" ] ; then
+  if [ "$NO_DOCKER" == "true" ] ; then
     pnpm install
   else
     docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm install"
@@ -98,7 +98,7 @@ localDep () {
     mkdir edifice-ts-client.tar && mkdir edifice-ts-client.tar/dist \
       && cp -R $PWD/../edifice-ts-client/dist $PWD/../edifice-ts-client/package.json edifice-ts-client.tar
     tar cfzh edifice-ts-client.tar.gz edifice-ts-client.tar
-    if [ "$NO_DOCKER" = "true" ] ; then
+    if [ "$NO_DOCKER" == "true" ] ; then
       pnpm install --no-save edifice-ts-client.tar.gz
     else
       docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm install --no-save edifice-ts-client.tar.gz"
@@ -136,7 +136,7 @@ runLocal() {
 }
 
 build () {
-  if [ "$NO_DOCKER" = "true" ] ; then
+  if [ "$NO_DOCKER" == "true" ] ; then
     pnpm build
   else
     docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm build"
@@ -150,7 +150,7 @@ build () {
 
 publishNPM () {
   LOCAL_BRANCH=`echo $GIT_BRANCH | sed -e "s|origin/||g"`
-  if [ "$NO_DOCKER" = "true" ] ; then
+  if [ "$NO_DOCKER" == "true" ] ; then
     pnpm publish --tag $LOCAL_BRANCH
   else
     docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm publish --tag $LOCAL_BRANCH"
