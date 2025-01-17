@@ -2,3 +2,15 @@ body {
   min-width: inherit;
   width: auto;
 }
+
+.btn-primary {
+  --edifice-btn-color: #ff8d2e !important;
+}
+
+.btn-outline-secondary {
+  --edifice-btn-color: #2a9cc8 !important;
+}
+
+.btn-ghost-tertiary, .btn-ghost-danger {
+  --edifice-btn-color: #4a4a4a !important;
+}
