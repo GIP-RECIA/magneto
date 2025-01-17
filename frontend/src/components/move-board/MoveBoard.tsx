@@ -1,7 +1,7 @@
 import { FunctionComponent, useState } from "react";
 
 // eslint-disable-next-line
-import { Button, Modal, TreeView, useOdeClient } from "@edifice-ui/react";
+import { Button, Modal, TreeView } from "@edifice-ui/react";
 
 import { useTranslation } from "react-i18next";
 
@@ -12,6 +12,7 @@ import { Folder, IFolderResponse } from "~/models/folder.model";
 import { useBoardsNavigation } from "~/providers/BoardsNavigationProvider";
 import { useFoldersNavigation } from "~/providers/FoldersNavigationProvider";
 import { useMoveBoardsMutation } from "~/services/api/boards.service";
+import { useOdeClient } from "~/utils/context.utils";
 import { UserRights } from "~/utils/share.utils";
 
 type props = {

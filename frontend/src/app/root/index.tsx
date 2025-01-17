@@ -1,5 +1,8 @@
-import { LoadingScreen, Layout, useOdeClient } from "@edifice-ui/react";
+import { LoadingScreen } from "@edifice-ui/react";
 import { Outlet } from "react-router-dom";
+
+import { Layout, useOdeClient } from "~/utils/context.utils";
+
 function Root() {
   const { init } = useOdeClient();
 

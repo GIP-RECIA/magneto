@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { useOdeClient, useOdeIcons } from "@edifice-ui/react";
+import { useOdeIcons } from "@edifice-ui/react";
 
 import { StyledAppIcon, StyledBoxSvg } from "./style";
 import { CardContentSvgDisplayProps } from "./types";
@@ -14,6 +14,7 @@ import { TextIcon } from "../SVG/TextIcon";
 import { VideoIcon } from "../SVG/VideoIcon";
 import { EXTENSION_FORMAT } from "~/core/constants/extension-format.const";
 import { useSVG } from "~/providers/SVGProvider";
+import { useOdeClient } from "~/utils/context.utils";
 
 export const CardContentSvgDisplay: FC<CardContentSvgDisplayProps> = ({
   extension,

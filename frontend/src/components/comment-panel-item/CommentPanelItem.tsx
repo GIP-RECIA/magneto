@@ -7,7 +7,7 @@ import {
   memo,
 } from "react";
 
-import { useOdeClient, useToast } from "@edifice-ui/react";
+import { useToast } from "@edifice-ui/react";
 import { mdiArrowUpCircle } from "@mdi/js";
 import Icon from "@mdi/react";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
@@ -39,6 +39,7 @@ import {
   useDeleteCommentMutation,
   useUpdateCommentMutation,
 } from "~/services/api/comment.service";
+import { useOdeClient } from "~/utils/context.utils";
 
 const CommentPanelItemBase = memo(
   (props: CommentPanelItemProps) => {

@@ -2,7 +2,7 @@ import { FC, useEffect, DragEvent, useState } from "react";
 
 import "./BoardView.scss";
 
-import { LoadingScreen, MediaLibrary, useOdeClient } from "@edifice-ui/react";
+import { LoadingScreen, MediaLibrary} from "@edifice-ui/react";
 import { mdiKeyboardBackspace } from "@mdi/js";
 import Icon from "@mdi/react";
 import { Box, GlobalStyles } from "@mui/material";
@@ -27,6 +27,7 @@ import { MENU_NOT_MEDIA_TYPE } from "~/core/enums/menu-not-media-type.enum";
 import { useSideMenuData } from "~/hooks/useSideMenuData";
 import { useBoard } from "~/providers/BoardProvider";
 import { useMediaLibrary } from "~/providers/MediaLibraryProvider";
+import { useOdeClient } from "~/utils/context.utils";
 
 export const BoardView: FC = () => {
   const { t } = useTranslation("magneto");

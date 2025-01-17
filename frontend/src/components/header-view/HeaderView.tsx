@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import "./HeaderView.scss";
 
-import { AppHeader, Breadcrumb, Button, useOdeClient } from "@edifice-ui/react";
+import { AppHeader, Breadcrumb, Button } from "@edifice-ui/react";
 import { mdiCheckCircle } from "@mdi/js";
 import Icon from "@mdi/react";
 import { Box } from "@mui/material";
@@ -19,6 +19,7 @@ import {
 import { BoardDescription } from "../board-description/BoardDescription";
 import { useBoard } from "~/providers/BoardProvider";
 import { Section } from "~/providers/BoardProvider/types";
+import { useOdeClient } from "~/utils/context.utils";
 
 export const HeaderView: FC = () => {
   const { board } = useBoard();

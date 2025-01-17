@@ -7,7 +7,7 @@ import {
   useState,
 } from "react";
 
-import { checkUserRight, useOdeClient } from "@edifice-ui/react";
+import { checkUserRight } from "@edifice-ui/react";
 import { RightRole } from "edifice-ts-client";
 import { useParams } from "react-router-dom";
 
@@ -27,6 +27,7 @@ import { Board, IBoardItemResponse } from "~/models/board.model";
 import { Card } from "~/models/card.model";
 import { useGetBoardDataQuery } from "~/services/api/boardData.service";
 import { useGetDocumentsQuery } from "~/services/api/workspace.service";
+import { useOdeClient } from "~/utils/context.utils";
 
 const BoardContext = createContext<BoardContextType | null>(null);
 

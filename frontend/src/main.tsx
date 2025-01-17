@@ -1,6 +1,5 @@
 import React from "react";
 
-import { OdeClientProvider, ThemeProvider } from "@edifice-ui/react";
 import {
   QueryCache,
   QueryClient,
@@ -15,6 +14,7 @@ import { MediaLibraryProvider } from "./providers/MediaLibraryProvider";
 import { router } from "./routes";
 import { setupStore } from "./store";
 import "~/i18n";
+import { OdeClientProvider, ThemeProvider } from "./utils/context.utils";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement!);

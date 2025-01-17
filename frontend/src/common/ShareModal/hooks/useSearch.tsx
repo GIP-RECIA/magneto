@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 
 import { ShareAction } from "./useShare";
 import { ShareOptions } from "../ShareModal";
+import { useOdeClient } from "~/utils/context.utils";
 
 type State = {
   searchInputValue: string;

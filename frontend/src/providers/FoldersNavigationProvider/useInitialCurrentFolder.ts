@@ -1,8 +1,8 @@
-import { useOdeClient } from "@edifice-ui/react";
 import { useTranslation } from "react-i18next";
 
 import { FOLDER_TYPE } from "~/core/enums/folder-type.enum";
 import { Folder } from "~/models/folder.model";
+import { useOdeClient } from "~/utils/context.utils";
 
 export const useInitialCurrentFolder = () => {
   const { user } = useOdeClient();

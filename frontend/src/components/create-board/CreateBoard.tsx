@@ -12,7 +12,6 @@ import {
   Modal,
   Radio,
   TextArea,
-  useOdeClient,
 } from "@edifice-ui/react";
 import ViewColumnOutlinedIcon from "@mui/icons-material/ViewColumnOutlined";
 import ViewQuiltOutlinedIcon from "@mui/icons-material/ViewQuiltOutlined";
@@ -32,6 +31,7 @@ import {
   useCreateBoardMutation,
   useUpdateBoardMutation,
 } from "~/services/api/boards.service";
+import { useOdeClient } from "~/utils/context.utils";
 
 export const CreateBoard: FC<CreateBoardProps> = ({
   isOpen,

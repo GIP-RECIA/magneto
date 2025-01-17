@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import "./TreeViewContent.scss";
 
-import { TreeView, useOdeClient } from "@edifice-ui/react";
+import { TreeView } from "@edifice-ui/react";
 import { useTranslation } from "react-i18next";
 
 import { useGetFolderTypeData } from "./utils";
@@ -11,6 +11,7 @@ import { Board } from "~/models/board.model";
 import { Folder, IFolderResponse } from "~/models/folder.model";
 import { useFoldersNavigation } from "~/providers/FoldersNavigationProvider";
 import { useMoveBoardsMutation } from "~/services/api/boards.service";
+import { useOdeClient } from "~/utils/context.utils";
 import { UserRights } from "~/utils/share.utils";
 
 type TreeViewContainerProps = {
