@@ -38,7 +38,7 @@
         <entCoreVersion>6.4.0</entCoreVersion>
         <reflectionsVersion>0.10.2</reflectionsVersion>
         <gatlingHighchartsVersion>2.2.2</gatlingHighchartsVersion>
-        <apachePoiVersion>5.2.3</apachePoiVersion>
+        <apachePoiVersion>5.4.0</apachePoiVersion>
         <jsoupVersion>1.18.3</jsoupVersion>
         <thumbnailatorVersion>0.4.20</thumbnailatorVersion>
     </properties>
